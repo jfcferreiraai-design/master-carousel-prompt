@@ -7,6 +7,7 @@ Active — applies to all test runs from Test 002 onward
 This spec was written after Test 001 (Overlay Hook, PT-PT). It formalizes the four operating modes of the carousel generator and introduces strict behavioral rules that address the failures identified in `tests/reports/overlay-hook/test-001-results.md`.
 
 The V1 instruction system is preserved in `archive/legacy/overlay-hook.md` as the V1 baseline. V2 replaces it for all new test runs.
+This spec defines the shared behavioral runtime that design variants inherit unless a variant-specific visual rule explicitly narrows the output.
 
 ---
 

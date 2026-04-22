@@ -18,12 +18,16 @@ Active internal source for the Claude-first carousel instruction systems.
 - Create and Export remain separate modes.
 - Export stays explicit and controlled.
 - No inline base64 blobs or giant data URIs in the main HTML.
+- Base64 or data URI embedding is only acceptable in explicit export-prep or export output when needed, never as blob dumping in the main preview HTML.
 - PT-PT must read as natively written, not translated.
 - Slide 1 must be strong, especially for Overlay Hook.
 - Uploaded chat images must not trigger blob dumping into the HTML.
 
 ## Active Architecture
 
+- The canonical swipe artifact remains `archive/legacy/claude_instagram_carousel_generator_en.md`.
+- The reusable wrapper or delivery shell lives in `/source/baselines/`.
+- The shared inner Project Instructions base lives in `/source/baselines/`.
 - Shared reusable logic lives in `/source/shared/`.
 - Variant-specific logic lives in `/source/variants/`.
 - Shipping files live in `/instructions/standalone/`.
