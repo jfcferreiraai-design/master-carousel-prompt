@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "social-content": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "686dd263804497f05ff8ddb5d83381371bea33241c296c21200733cb898ecd75"
+    },
+    "social-media-carousel": {
+      "source": "inference-sh/skills",
+      "sourceType": "github",
+      "computedHash": "f4c29c8489c953abf919cec1296990531bb84661ed4fd5dc16150351febcacf1"
+    }
+  }
+}

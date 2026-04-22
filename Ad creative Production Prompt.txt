@@ -1,0 +1,20 @@
+Now, act as a senior ad specialist and designer. Give me 10 square format (1080x1080) ad creatives.
+
+Each ad must test a different angle/hook (outcome, mechanism, credibility, math, pain, comparison, specificity, curiosity, speed, contrarian).
+
+Here are reference ads that represent the quality and style we're after. Study them and match or exceed that level:
+
+[https://clientzone.notion.site/AI-Ad-Creation-Mastery-2026-32eefac5134f80c79341e404d6dcb43c](https://www.notion.so/AI-Ad-Creation-Mastery-2026-32eefac5134f80c79341e404d6dcb43c?pvs=21)
+
+**Ad visual style (match this exactly):**
+
+Every ad follows the same premium template:
+
+- **Background:** Deep, rich background color that fits the brand mood. Could be dark, could be light, could be moody, could be warm. What matters is atmosphere and depth. There should be a subtle ambient glow (in the brand's accent color) emanating from behind or beneath the product mockup. Not flat. There's a light source, reflections, and dimension.
+- **Headline:** Massive bold condensed uppercase font (like Oswald Bold or similar) in white or high-contrast color, filling the top 30-40% of the frame. The key phrase or power word is highlighted in the brand's accent color. The headline is the dominant visual element.
+- **Subheadline:** Smaller, lighter weight font in white or light gray, sitting directly under the headline. 1-2 lines max. Conversational, not salesy.
+- **Product mockup:** Center-bottom of the frame. The full 3D product bundle (book + tablet + phone or similar) floating with a colored glow/reflection underneath on what looks like a glass or reflective surface. The mockup is the hero visual and takes up roughly 40-50% of the image.
+- **Price badge:** A rounded pill-shaped button at the very bottom center reading "ONLY $[PRICE]" in the brand's accent color with a slight gradient or metallic sheen. Looks tappable.
+- **Overall feel:** Dramatic. Premium. Like a cinematic product shot, not a Canva template. High contrast, moody lighting, the kind of ad that stops your thumb because it looks expensive.
+
+Generate each ad as a single complete AI-generated image with the text, product scene, and price badge all composed together in one render. Do NOT composite text over images separately in Python.
