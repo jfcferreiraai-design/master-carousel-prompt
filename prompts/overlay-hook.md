@@ -246,6 +246,7 @@ Suggested scale:
 - shown on every slide
 - fills as the user swipes
 - last slide reaches 100%
+- this must be embedded inside each slide, not only shown in external controls
 
 Use behavior like this:
 
@@ -267,6 +268,7 @@ function progressBar(index, total, isLightSlide) {
 ### 2. Swipe Arrow (every slide except the last)
 - subtle chevron on the right edge
 - removed from the last slide
+- this must be embedded inside the slide image system, not only shown as external controls
 
 ```javascript
 function swipeArrow(isLightSlide) {
@@ -404,27 +406,19 @@ Slides 2+ should become cleaner and more readable than slide 1.
 
 ---
 
-## CTA Rules
+## Instagram Preview Wrapper (Non-Negotiable)
 
-This variant uses a lighter CTA than promo carousels.
+When displaying the carousel in chat, wrap the output in an Instagram-style frame.
+This is not optional.
 
-Good CTA styles:
-- save this
-- share this
-- follow for more
-- comment your take
-- want more like this?
-- learn more
-
-Avoid turning the final slide into a hard-sell ad unless the user explicitly wants that.
-
-The CTA slide should feel like a natural finish, not a conversion ambush.
-
----
-
-## Instagram Preview Wrapper
-
-When displaying the carousel in chat, wrap it in an Instagram-style frame so the user can preview the experience.
+The preview must include these class names so the export logic can target them:
+- `.ig-frame`
+- `.ig-header`
+- `.carousel-viewport`
+- `.carousel-track`
+- `.ig-dots`
+- `.ig-actions`
+- `.ig-caption`
 
 Include:
 - header with avatar/logo + handle
@@ -439,6 +433,8 @@ Important:
 - viewport should be **420 × 525px**
 - do not change this width system
 - all layout sizing should be designed around this preview width
+
+If the generated HTML does not include this wrapper structure, it is incomplete.
 
 ---
 
@@ -524,12 +520,19 @@ asyncio.run(export_slides())
 
 When the user asks you to create the carousel, produce:
 1. a short summary of the chosen direction
-2. the fully designed HTML preview
+2. the fully designed Instagram-frame HTML preview
 3. the export-ready HTML or code block
-4. optional short notes on image handling if useful
+4. a short follow-up line inviting either revision or export
 
-Do not dump planning notes unless the user asks.
-Do the work.
+Use this exact final behavior after showing the carousel:
+- if the user wants changes, revise the HTML
+- if the user is happy, offer to generate/export the slide PNGs next
+
+Example follow-up tone:
+- “If you're happy with this direction, I can now prepare the export-ready slide PNG workflow next. If you want changes first, tell me which slides to refine.”
+
+Do not end abruptly after the HTML.
+Do not omit the revision/export follow-up.
 
 ---
 
@@ -543,6 +546,9 @@ Before finalizing the carousel, check:
 5. Did the carousel accidentally become a tutorial template?
 6. Did the CTA stay light and appropriate?
 7. Does the whole carousel feel premium and intentional?
+8. Did you include the Instagram preview wrapper?
+9. Did you embed progress bars and swipe arrows inside the slide system?
+10. Did you end with a revision/export follow-up?
 
 If no, revise before presenting.
 
@@ -556,6 +562,9 @@ If no, revise before presenting.
 - slides 2+ losing rhythm after a strong cover
 - turning the whole thing into a generic educational carousel
 - drifting into hard-sell promo style
+- outputting bare slides without the Instagram preview wrapper
+- relying only on external controls instead of embedded slide UI
+- forgetting the export/revision follow-up
 
 ---
 
