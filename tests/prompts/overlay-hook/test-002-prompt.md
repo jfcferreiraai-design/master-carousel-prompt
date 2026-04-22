@@ -1,5 +1,7 @@
 # Test 002 - Create + Preview Only, No-Image Fallback, PT-PT
 
+Assume que as Project Instructions de Overlay Hook já estão instaladas.
+
 Cria um carrossel em modo Overlay Hook com estas definições:
 
 - Marca: Norte Studio
@@ -19,6 +21,7 @@ Regras deste teste:
 - Não exportes slides.
 - Não cries script de exportação.
 - Não peças imagem adicional.
+- Não faças perguntas adicionais se a informação acima já for suficiente.
 - Usa o caminho de fallback sem imagem com CSS e/ou SVG leve.
 - Mantém o preview completo dentro do frame de Instagram.
 - A capa tem de parecer premium/editorial com hook forte em PT-PT natural.

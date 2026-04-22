@@ -4,9 +4,9 @@
 Active — applies to all test runs from Test 002 onward
 
 ## Context
-This spec was written after Test 001 (Overlay Hook, PT-PT). It formalizes the four operating modes of the carousel generator and introduces strict behavioral rules that address the failures identified in test-001-results.md.
+This spec was written after Test 001 (Overlay Hook, PT-PT). It formalizes the four operating modes of the carousel generator and introduces strict behavioral rules that address the failures identified in `tests/reports/overlay-hook/test-001-results.md`.
 
-The V1 instruction system (`prompts/overlay-hook.md`) is preserved as the V1 baseline. V2 replaces it for all new test runs.
+The V1 instruction system is preserved in `archive/legacy/overlay-hook.md` as the V1 baseline. V2 replaces it for all new test runs.
 
 ---
 
@@ -21,7 +21,7 @@ The carousel generator must operate in exactly four discrete modes. Each mode ha
 **Trigger:** User requests a new carousel
 
 **What happens:**
-1. Collect all required and strongly recommended inputs before generating anything (see input list in prompts/carousel-master-instruction-v2.md)
+1. Collect all required and strongly recommended inputs before generating anything (see input list in `source/shared/intake.md`)
 2. Derive the full 6-token color palette from the single primary color input
 3. Select typography based on tone and font preference
 4. Generate structured slide content following the variant's slide sequence
@@ -214,9 +214,10 @@ This rule is absolute and applies to all modes.
 - Large data URIs of any kind embedded directly in the HTML file body
 
 **When the user provides an image:**
-1. Reference the image by its local path in the HTML during the preview phase
-2. Only embed as base64 in a separate export-prep step, in a dedicated asset-embedding script
-3. Never inline the base64 directly into the main carousel HTML file
+1. Use a lightweight asset reference only if the Claude runtime can support it safely in preview
+2. If that is not possible without dumping asset data into the HTML, use a strong CSS or SVG fallback during preview
+3. Only handle asset embedding in a separate export-prep step when explicitly needed
+4. Never inline the base64 directly into the main carousel HTML file
 
 If no image is available, the system must fall back to a CSS or SVG-based background that looks strong — not a placeholder or blank area.
 

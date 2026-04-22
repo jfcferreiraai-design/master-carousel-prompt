@@ -1,10 +1,10 @@
-# Test 001 — Overlay Hook Carousel (PT-PT)
+# Test 001 - Overlay Hook Carousel (PT-PT)
 
 ## Status
-Completed — results recorded in `tests/test-001-results.md`
+Completed - results recorded in `tests/reports/overlay-hook/test-001-results.md`
 
 ## Objective
-Validate the Overlay Hook instruction system's ability to generate a fully functional, export-ready Instagram carousel in European Portuguese (PT-PT), starting from the standalone copy-paste instruction block in `prompts/overlay-hook.md`.
+Validate the Overlay Hook instruction system's ability to generate a fully functional, export-ready Instagram carousel in European Portuguese (PT-PT), starting from the active standalone instruction file in `instructions/standalone/overlay-hook.md`.
 
 The goal was to confirm whether the baseline system could:
 - collect brand inputs and apply the Overlay Hook variant logic
@@ -15,7 +15,7 @@ The goal was to confirm whether the baseline system could:
 ---
 
 ## Content type
-Informative / trend-led carousel — Overlay Hook variant
+Informative / trend-led carousel - Overlay Hook variant
 
 Topic class: industry commentary or insight-driven post directed at a PT-PT marketing audience
 
@@ -27,17 +27,17 @@ Topic class: industry commentary or insight-driven post directed at a PT-PT mark
 - Clean structured supporting slides with strong text hierarchy
 - Light/dark slide alternation for visual rhythm
 - Progress bar and swipe arrow present on every slide per spec
-- No decorative clutter — premium restraint throughout
+- No decorative clutter - premium restraint throughout
 
 ---
 
 ## Language requirement
-**PT-PT — European Portuguese only**
+**PT-PT - European Portuguese only**
 
 Specific criteria:
 - vocabulary and phrasing aligned with European Portuguese usage, not Brazilian
 - professional register appropriate for Instagram content marketing in Portugal
-- natural sentence rhythm and idiom — not a direct translation from English
+- natural sentence rhythm and idiom - not a direct translation from English
 - no Brazilianisms in vocabulary or grammar (e.g. avoid gerund constructions prevalent in BR Portuguese)
 - no English-to-Portuguese idiom mapping that produces unnatural output
 
@@ -59,12 +59,12 @@ Slide backgrounds should use only CSS gradients, CSS-based shapes, or inline SVG
 
 1. Display a fully swipeable carousel inside a correctly structured `.ig-frame` (420px wide) including: header with avatar and handle, 4:5 viewport, dot indicators, action icon row, and caption section
 
-2. Show 6–7 slides following the Overlay Hook narrative arc:
-   - Slide 1: hook cover with overlay treatment
-   - Slides 2–6: structured insight slides (context, key points, takeaway)
-   - Slide 7: light CTA with no swipe arrow and full progress bar
+2. Show 6-7 slides following the Overlay Hook narrative arc:
+- Slide 1: hook cover with overlay treatment
+- Slides 2-6: structured insight slides (context, key points, takeaway)
+- Slide 7: light CTA with no swipe arrow and full progress bar
 
-3. Provide an export-ready HTML file and a Playwright script that produces individual slide PNGs at 1080×1350px using `device_scale_factor`, not viewport resize
+3. Provide an export-ready HTML file and a Playwright script that produces individual slide PNGs at 1080x1350px using `device_scale_factor`, not viewport resize
 
 4. Apply a brand-derived 6-token color palette from a single primary color input
 
