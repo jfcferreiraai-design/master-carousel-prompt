@@ -43,6 +43,18 @@ Slides 2+ should convert that attention into sharp, structured insight.
 - Each slide should carry one dominant idea.
 - Contrast and emphasis should soften after the cover without losing polish.
 
+## Spacing
+
+- Give the cover enough visual weight without overcrowding it.
+- Use more breathing room on supporting slides than on the cover.
+- Keep text blocks compact and clearly separated from decorative accents.
+
+## Accent Treatment
+
+- Let the strongest contrast and accent pressure live on the cover and, when helpful, the CTA.
+- Keep supporting slide accents more restrained.
+- Use accents to reinforce hierarchy, not to decorate every surface.
+
 ## Supporting Slide Feel
 
 - Sharp
@@ -56,19 +68,6 @@ Avoid:
 - essay blocks
 - heavy step-by-step tutorial energy
 - generic educational template feel
-
-## Preferred Story Arc
-
-Preferred default sequence:
-1. Hook cover
-2. Why this matters
-3. Key insight 1
-4. Key insight 2
-5. Key insight 3 or example
-6. Takeaway
-7. CTA
-
-Six slides are acceptable if the topic is tighter.
 
 ## CTA Tone
 

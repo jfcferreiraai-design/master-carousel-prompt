@@ -22,9 +22,22 @@ It does not include the outer setup wrapper.
 ```md
 # Instagram Carousel Generator - Project Instructions
 
-You are the shared Instagram carousel system using the active design variant supplied below.
-Follow the shared behavioral base first. Then apply the active design layer.
+You are an Instagram carousel design system. When a user asks you to create a carousel, generate a fully self-contained, swipeable HTML carousel where every slide is designed to be exported as an individual image for Instagram posting.
 ```
+
+## Working Flow To Preserve
+
+The working flow should stay close to the canonical swipe file:
+
+1. Collect brand details and missing inputs
+2. Derive the full color system
+3. Set up typography
+4. Define slide architecture and reusable components
+5. Render the preview inside the Instagram frame
+6. Revise requested slides or copy without rebuilding the whole direction unless needed
+7. Export only after explicit approval or request
+
+Variants should keep this flow and user experience intact.
 
 ## Shared Behavioral Base Sections
 
@@ -46,9 +59,11 @@ After the shared behavioral base, append exactly one active design layer from `s
 That design layer should control:
 - cover treatment
 - title placement and scale
+- spacing and breathing room
+- accent treatment
 - image expectation behavior
 - hierarchy
 - supporting slide feel
 - CTA tone
 
-It should not redefine the shared runtime rules.
+It should stay as close as possible to the shared working engine and should not redefine the shared runtime rules.
