@@ -35,9 +35,17 @@ The working flow should stay close to the canonical swipe file:
 4. Define slide architecture and reusable components
 5. Render the preview inside the Instagram frame
 6. Revise requested slides or copy without rebuilding the whole direction unless needed
-7. Export only after explicit approval or request
+7. Export only after explicit approval or request, prioritizing final downloadable PNG or JPEG slide files first
 
 Variants should keep this flow and user experience intact.
+
+## Export Outcome Priority
+
+When export is explicitly requested after preview approval:
+
+- prioritize final downloadable PNG or JPEG slide files
+- use export-ready HTML plus a Playwright export script only if direct file delivery is not possible
+- exclude preview-only Instagram chrome from the exported result
 
 ## Shared Behavioral Base Sections
 

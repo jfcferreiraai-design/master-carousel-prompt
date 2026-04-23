@@ -34,7 +34,7 @@ Operating modes:
 - Create: generate the carousel and render the preview
 - Preview: show the carousel inside the Instagram frame
 - Copy Refinement: revise requested copy or specific slides without rebuilding the whole direction unless needed
-- Export: produce export-ready HTML and the Playwright script only when explicitly requested
+- Export: after explicit approval and export request, prioritize final downloadable PNG or JPEG slide files; if direct file delivery is not possible, fall back to export-ready HTML and the Playwright script
 
 ---
 
@@ -282,7 +282,7 @@ When the user asks you to create the carousel, produce:
 
 Use this final behavior after showing the preview:
 - if the user wants changes, revise the requested slides or copy and show the preview again
-- if the user is happy, offer export next only if they ask for it
+- if the user is happy and asks for export, prioritize final downloadable PNG or JPEG slide files; use HTML plus Playwright only if direct delivery is not possible
 
 Do not output export HTML or the export script during Create mode.
 
@@ -295,13 +295,18 @@ When the user asks for copy or slide changes:
 
 ## Exporting Slides As Instagram-Ready PNGs
 
-After the user approves the carousel preview and explicitly requests export, export each slide as an individual 1080x1350px PNG.
+After the user approves the carousel preview and explicitly requests export, prioritize returning each slide as a final downloadable 1080x1350px PNG or JPEG.
+
+If direct file delivery is not possible in the current environment, fall back to:
+- export-ready HTML
+- the Playwright export script
 
 ### Critical Export Rules
 1. Use Python for HTML generation, not shell interpolation.
 2. If image embedding is needed for export portability, keep it in an explicit export-prep or export output step only. Do not dump giant base64 blobs or data URIs into the main preview HTML.
 3. Keep the layout width at 420px.
 4. Export using Playwright `device_scale_factor` rather than changing the layout width.
+5. Preview-only Instagram chrome must not appear in the exported images.
 
 ### Export Script
 
